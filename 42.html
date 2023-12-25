@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+body{
+    width: 90%;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, serif;
+}
+
+            header {
+                position: sticky;
+                top:0;
+                background-color: white;
+                z-index: 10;
+            }
+
+            header > nav {
+                display: flex;
+                justify-content:space-between;
+                
+            }
+
+            header > nav div ul {
+                display: inline-flex;
+                list-style-type: none;
+                font-weight: 600;
+            }
+
+            .nav-btn {
+                padding: 6px;
+                color:white;
+                font-weight: 600;
+                background-color: black;
+                border-radius: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .main-heading{
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            .main-heading h1 {
+                font-size: 3rem;
+                font-weight: 500;
+                margin-bottom: 0;
+                word-spacing: 1.5px;
+                font-family: serif;
+            }
+
+            .main-heading p {
+                font-weight: 350;
+                word-spacing: 2px;
+            }
+
+            .main-heading-btn {
+                margin-top: 16px;
+                width: 22%;
+                height: 40px;
+                padding-top: 16px;
+                padding-bottom: 32px;
+                border: 1.5px solid black;
+                border-radius: 15px;
+                background-color: #06945b;
+                color:white;
+                font-weight: 600;
+            }
+
+            .main-heading-p{
+                font-weight: 300;
+                font-size: 0.8rem;
+            }
+
+        .main-heading img{
+            margin-top: 20px;
+            object-fit: cover;
+        }
+
+        .awards {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .main-heading-p1{
+                font-weight: 300;
+                font-size: 0.8rem;
+                text-align: center;
+                margin-top: 0;
+        }
+
+        .main1-btn {
+                margin-top: 10px;
+                width: 35%;
+                height: 20px;
+                padding-top: 15px;
+                padding-bottom: 30px;
+                border: 1.5px solid black;
+                border-radius: 23px;
+                background-color: #f1b280;
+                color:black;
+                font-weight: 600;
+        }
+
+        .main1 {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            position: relative;
+            width: 80%;
+            margin:0 auto;
+            margin-top: 50px;
+        }
+
+        .main2 {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            position: relative;
+            width: 80%;
+            margin:0 auto;
+            margin-top: 80px;
+           padding-top: 30px;
+        }
+
+        .main3 {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            position: relative;
+            width: 80%;
+            margin:0 auto;
+            margin-top: 80px;
+            padding-top: 30px;
+        }
+
+        .main2-btn {
+                margin-top: 10px;
+                width: 35%;
+                height: 20px;
+                padding-top: 15px;
+                padding-bottom: 30px;
+                border: 1.5px solid black;
+                border-radius: 23px;
+                background-color: #68e5a2;
+                color:black;
+                font-weight: 600;
+        }
+
+        .main3-btn {
+                margin-top: 10px;
+                width: 35%;
+                height: 20px;
+                padding-top: 15px;
+                padding-bottom: 30px;
+                border: 1.5px solid black;
+                border-radius: 23px;
+                background-color: #395be0;
+                color:white;
+                font-weight: 600;
+        }
+
+        .main4-btn {
+                margin-top: 70px;
+                padding-top: 50px;
+                width: 300px;
+                height: 40px;
+                padding-top: 15px;
+                padding-bottom: 30px;
+                border: 1.5px solid black;
+                border-radius: 13px;
+                background-color: #fae053;
+                color:black;
+                font-weight: 600;
+        }
+
+        .main1 h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            font-family: serif;
+        }
+
+        .main2 h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            font-family: serif;
+        }
+
+        .main3 h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            font-family: serif;
+        }
+
+        .main1 p {
+            margin-top: 10px;
+            font-weight: 300;
+            
+        }
+
+        .main-mini {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 40px;
+           
+        }
+
+        .main-mini p {
+            font-size: 0.9rem;
+        }
+
+        .main-mini  div {
+           position: relative;
+          
+        }
+
+        .main-mini-img {
+            position: absolute;
+            top: 90px;
+            z-index: 3;
+        }
+
+        .color-block {
+            margin-top: 50px;
+            position: relative;
+            border: 1.5px solid black;
+            height: 30%;
+            border-radius: 35px;
+            padding: 35px;
+            background-color: #f1b280;
+            font-weight: 400;
+        }
+
+        .color-block1 {
+            margin-top: 50px;
+            position: relative;
+            border: 1.5px solid black;
+            height: 30%;
+            border-radius: 35px;
+            padding: 35px;
+            background-color: #68e5a2;
+            font-weight: 400;
+        }
+
+        .color-block2 {
+            margin-top: 50px;
+            position: relative;
+            border: 1.5px solid black;
+            height: 30%;
+            border-radius: 35px;
+            padding: 35px;
+            background-color: #395be0;
+            font-weight: 400;
+            color: white;
+        }
+
+        .color-block3 {
+            margin-top: 100px;
+            position: relative;
+            border: 1.5px solid black;
+            height: 50%;
+            border-radius: 35px;
+            padding: 35px;
+            background-color: transparent;
+            font-weight: 400;
+            color: black;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .color-block3 h1 {
+            font-size: 3rem;
+            font-weight: 500;
+            font-family: serif;
+        }
+
+        .color-block3 p {
+            font-weight: 350;
+        }
+
+        .clo4 {
+            display: inline-flex;
+            justify-content: space-between;   
+           text-align: center;
+           padding-left: 30px;
+           padding-right: 30px;
+           gap:60px;
+          
+           
+        }
+
+        .clo4 img {
+            object-fit: cover;
+            position: absolute;
+            width: 40%;
+            opacity: 0.2;
+        }
+
+        .clo4 h1 {
+            font-size: 5rem;
+        }
+
+        .clo4 p {
+           font-weight: 300;
+        }
+
+        .block-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .profile {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+        }
+
+        .block-container-p {
+            display: inline-flex;
+        }
+
+        .colo {
+            text-align: right;
+        }
+
+        .conti {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 50px;
+            margin-top: 80px;
+        }
+
+        .conti > .info-sec {
+            
+            border: 1.5px solid black;
+            border-radius: 15px;
+            height: 70%;
+            padding: 50px;
+        }
+
+        .info-sec img {
+            border: 2px solid black;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #fae053;
+        }
+
+        .info-sec p{
+            font-weight: 300;
+        }
+
+        .link1 {
+        padding-top: 80px;
+       
+        }
+
+        .link2 {
+        padding-top: 30px;
+        }
+
+        .link3 {
+        padding-top: 50px;
+        }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div>
+                    <ul><li>Sell</li></ul>
+                    <ul><li>Market</li></ul>
+                    <ul><li>Manage</li></ul>
+                </div>
+
+                <div>
+                    <ul><li>Learn</li></ul>
+                    <ul><li>Partners</li></ul>
+                    <ul><li>Pricing</li></ul>
+                    <ul><li>Login</li></ul>
+                    <ul><li><input type="submit" class="nav-btn" value="Get started for FREE"></li></ul>
+                </div>
+            </nav>
+        </header>
+
+        <section class="main-heading">
+            <h1>Start selling online for free</h1>
+            <p>
+            We're putting free trials on With Ecwid, you get free forever. Set up<br>
+            your free account once, and keep it as long as you like. Seriously.
+            </p>
+
+            <input type="submit" value="Get started for free" class="main-heading-btn">
+        
+            <p class="main-heading-p">No credit card required</p>
+       
+            <img src="header 1.PNG" height="380" width="460">
+        </section>
+
+        <div class="awards">
+            <div>
+                <img src="aw1.PNG">
+                <p class="main-heading-p1">Best ease of use</p>
+            </div>
+
+            <div>
+                <img src="aw2.PNG">
+                <p class="main-heading-p1">4.7 average rating</p>
+            </div>
+
+            <div>
+                <img src="aw3.PNG">
+                <p class="main-heading-p1">Easiest Setup Summer 2021</p>
+            </div>
+
+            <div>
+                <img src="aw3.PNG">
+                <p class="main-heading-p1">Best Usability Summer 2021</p>
+            </div>
+        </div>
+
+        <section class="main1">
+            <div>
+                
+                <h1>Sell anywhere</h1>
+
+                <p>
+                Set up your Ecwid store once to easily sync and sell across a webiste, <br>
+                social media, marketplace like Amazon, and live-in-person. Get started <br>
+                with one, or try them all.
+                </p>
+
+                <input type="submit" value="Learn more" class="main1-btn">
+            
+
+            <div class="main-mini">
+                <div>
+                    <h3>facebook</h3>
+
+                    <p >
+                        set up and manage a Facebook Store<br>
+                        right from Ecwid dashboard.<br>
+                        You're readu for social selling
+                    </p>
+                </div>
+
+                <div>
+                    <h3><i>Instagram</i></h3>
+
+                    <p>
+                        Let customers order directly from your<br>
+                        Instagram posts when your powered.<br>
+                        by Ecwid.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <img class="main-mini-img" src="undraw_blooming_re_2kc4.svg" height="450">
+        </div>
+
+       
+        </section>
+
+        <div class="color-block">
+            <p>
+            This is the perfect place to get your online business up and running. You <br>
+            literally dont have to go anywhere else. They have everything you need <br>
+            plus add on widgets web synching to social media and more!
+            </p>
+
+            <div class="block-container">
+                <div class="block-container-p">
+                    <img class="profile" src="employee-1.jpg">
+                    <p><b>Michelle jackson</b></p>
+                </div>
+
+                <div class="block-container-p">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                </div>
+            </div>
+        </div>
+
+        <section class="main2">
+            <div>
+                <img class="main-mini-img" src="undraw_woman_ffrd.svg" height="450">
+            </div>
+
+            <div>
+                
+                <h1>Grow Faster</h1>
+
+                <p>
+                Ecwid gives you the power to easily sell anywhere, to anyone - across <br>
+                the internet and around the world, Control everything from a single <br>
+                platform with centralized, order management, and pricing it <br>
+                doesn't get any simpler than this.
+                </p>
+
+                <input type="submit" value="Learn more" class="main2-btn">
+            
+
+            <div class="main-mini">
+                <div>
+                    <h3>Google advertising</h3>
+
+                    <p >
+                        set up and manage a Facebook Store<br>
+                        right from Ecwid dashboard.<br>
+                        You're readu for social selling
+                    </p>
+                </div>
+
+                <div>
+                    <h3><i>Facebook advertising</i></h3>
+
+                    <p>
+                        Let customers order directly from your<br>
+                        Instagram posts when your powered.<br>
+                        by Ecwid.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+       
+        
+       
+        </section>
+        
+        <div class="color-block1">
+           
+
+            <p class="colo">
+                This is the perfect place to get your online business up and running. You <br>
+                literally dont have to go anywhere else. They have everything you need <br>
+                plus add on widgets web synching to social media and more!
+            </p>
+
+            <div class="block-container">
+               
+
+                <div class="block-container-p">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                </div>
+
+                <div class="block-container-p">
+                    <img class="profile" src="employee-2.jpg">
+                    <p><b>Michelle jackson</b></p>
+                </div>
+            </div>
+        </div>
+
+        <section class="main3">
+            <div>
+                
+                <h1>Manage Simply</h1>
+
+                <p>
+                Set up your Ecwid store once to easily sync and sell across a webiste, <br>
+                social media, marketplace like Amazon, and live-in-person. Get started <br>
+                with one, or try them all.
+                </p>
+
+                <input type="submit" value="Learn more" class="main3-btn">
+            
+
+            <div class="main-mini">
+                <div>
+                    <h3>fast and secure payments</h3>
+
+                    <p >
+                        set up and manage a Facebook Store<br>
+                        right from Ecwid dashboard.<br>
+                        You're readu for social selling
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Shipping that works for you</h3>
+
+                    <p>
+                        Let customers order directly from your<br>
+                        Instagram posts when your powered.<br>
+                        by Ecwid.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <img class="main-mini-img" src="undraw_world_re_768g.svg" height="450">
+        </div>
+
+       
+        </section>
+
+        <div class="color-block2">
+            <p>
+            This is the perfect place to get your online business up and running. You <br>
+            literally dont have to go anywhere else. They have everything you need <br>
+            plus add on widgets web synching to social media and more!
+            </p>
+
+            <div class="block-container">
+                <div class="block-container-p">
+                    <img class="profile" src="employee-1.jpg">
+                    <p><b>Benjamin Scott</b></p>
+                </div>
+
+                <div class="block-container-p">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                    <img src="bxs-star.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="color-block3">
+            
+            <div>
+            <h1>
+                Sell around <br>
+                the world
+            </h1>
+            
+            <p>
+           Take your email business global with <br>
+           built in international tools and <br>
+           translation support for 50 languages - <br>
+           and counting.
+            </p>
+        </div>
+
+        <div class="clo4">
+            <img src="World_Map_Grayscale.png">
+            <div>
+                <h1>50+</h1>
+                <p>Payment gateways</p>
+            </div>
+
+            <div>
+                <h1>175</h1>
+                <p>countries</p>
+            </div>
+
+            <div>
+                <h1>50</h1>
+                <p>Languages</p>
+            </div>
+        </div>
+           
+        </div>
+
+        <section class="conti">
+
+        <div class="info-sec">
+            <div>
+                <img src="bx-headphone.svg">
+            </div>
+
+            <div>
+                <h3>Live Support</h3>
+                <p>Expert support whenever you need it</p>
+            </div>
+
+            <div class="link1">
+                <b>Learn more</b>
+            </div>
+        </div>
+
+        <div class="info-sec">
+            <div>
+                <img src="bx-grid-alt.svg">
+            </div>
+
+            <div>
+                <h3>Ecwid App Market</h3>
+                <p>
+                Take your store to the next level with <br>
+                new tools and apps from our Ecwid <br>
+                partners.
+                </p>
+            </div>
+
+            <div class="link2">
+                <b>Learn more</b>
+            </div>
+        </div>
+
+        <div class="info-sec">
+            <div>
+                <img src="bx-mobile-alt.svg">
+            </div>
+
+            <div>
+                <h3>Manage on Mobile</h3>
+                <p>
+                Manage business on the go with the<br>
+                Ecwid mobile app.
+                </p>
+            </div>
+
+            <div class="link3">
+                <b>Learn more</b>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="color-block3">
+            
+        <div>
+        <h1>
+            Your free online store is <br>
+            just a few clicks away.
+        </h1>
+        
+       
+    </div>
+
+    <div class="clo4">
+        <input type="submit" value="Get started for free" class="main4-btn">
+        
+    </div>
+    
+    </div>
+    </body>
+</html>
